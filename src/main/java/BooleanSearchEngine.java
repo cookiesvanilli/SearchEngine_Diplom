@@ -8,7 +8,7 @@ import java.util.*;
 // Движок будет искать в тексте ровно то слово, которое было указано,
 // без использования синонимов и прочих приёмов нечёткого поиска
 public class BooleanSearchEngine implements SearchEngine {
-    protected static Map<String, List<PageEntry>> wordsIndex;
+    protected Map<String, List<PageEntry>> wordsIndex;
 
     public BooleanSearchEngine(File pdfsDir) throws IOException {
         wordsIndex = IndexWord.getStorage().getIndexWord();
